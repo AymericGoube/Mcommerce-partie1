@@ -1,0 +1,74 @@
+{
+	"id": "c85d3f4b-a591-41f9-839c-a89196ddb20f",
+	"name": "TestMicroServiceOP",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"70243eec-58e8-4cfd-88c7-d4dea8d1120f",
+		"5588f0a2-1e86-4cfc-87a3-8e231390979c",
+		"ecee8630-ee61-4e4c-b1a4-72d0c02371df"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "5588f0a2-1e86-4cfc-87a3-8e231390979c",
+			"name": "P2: Tri par ordre alphabétique",
+			"url": "http://localhost:8080/AdminProduitsByOrder",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "70243eec-58e8-4cfd-88c7-d4dea8d1120f",
+			"name": "P1: Affichage de la marge",
+			"url": "http://localhost:8080/AdminProduits",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "ecee8630-ee61-4e4c-b1a4-72d0c02371df",
+			"name": "http://localhost:8080/Produits",
+			"url": "http://localhost:8080/Produits",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"id\": 4,\n\t\"nom\": \"Poney en bois\",\n\t\"prix\": 0\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}
