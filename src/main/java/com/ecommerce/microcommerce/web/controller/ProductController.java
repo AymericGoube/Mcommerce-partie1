@@ -17,6 +17,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
+import java.util.TreeMap;
 
 
 @Api( description="API pour es opérations CRUD sur les produits.")
@@ -103,6 +104,25 @@ public class ProductController {
         return productDao.chercherUnProduitCher(400);
     }
 
+    //Calculer marge produit
+    @GetMapping(value = "/AdminProduits")
+    public TreeMap<String,Integer> calculerMargeProduit(){
+
+
+        List<Product> produits = productDao.findAll();
+
+        TreeMap<String,Integer> h = new TreeMap<String, Integer>();
+
+        for (Product p :produits) {
+            String k=p.toString();
+            Integer v=p.getPrix()-p.getPrixAchat();
+            System.out.println("---------------------------");
+            System.out.println(k);
+
+            h.put(k,v);
+        }
+        return h;
+    }
 
 
 }
