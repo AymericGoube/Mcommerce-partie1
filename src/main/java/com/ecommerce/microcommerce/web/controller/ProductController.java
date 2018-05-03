@@ -71,10 +71,10 @@ public class ProductController {
 
     public ResponseEntity<Void> ajouterProduit(@RequestBody Product product) {
 
-        Product productAdded =  productDao.save(product);
-
-        if (productAdded.getPrix() == 0)
+        if (product.getPrix() == 0)
             throw new ProduitGratuitException("Le prix du produit ne peut pas être égal à 0 !");
+
+        Product productAdded =  productDao.save(product);
 
         if (productAdded == null)
             return ResponseEntity.noContent().build();
